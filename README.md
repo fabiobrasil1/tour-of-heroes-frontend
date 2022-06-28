@@ -17,7 +17,11 @@ Para simular o backend intalamos
 ```
 npm i json-server --save-dev
 ```
+Para rodar o mock-backend
 
+```
+npm run backend
+```
 
 ## Development server
 
