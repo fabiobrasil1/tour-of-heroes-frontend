@@ -1,14 +1,18 @@
 <mat-accordion *ngIf="messageService.getMessages().length">
-  <mat-expansion-panel>
+  <mat-expansion-panel expanded="true">
     <mat-expansion-panel-header>
-      <mat-panel-title>
-        Messages
-      </mat-panel-title>
-      
+      <mat-panel-title> Messages </mat-panel-title>
+
       <mat-panel-description>
-        {{messageService.getMessages.length}} records(s)
+        {{messageService.getMessages.length}} record(s)
       </mat-panel-description>
     </mat-expansion-panel-header>
+
+    <P>
+      <button color="warn" mat-raised-button (click)="messageService.clear()">
+        Clear messages
+      </button>
+    </P>
 
     <div *ngFor="let message of messageService.getMessages()">
       {{message}}
